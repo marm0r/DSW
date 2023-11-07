@@ -2,7 +2,33 @@
 <html>
 <head>
   <title>Digital Clock</title>
-  //style
+  <style>
+    body {
+      background-color: black;
+    }
+    .clock{
+      color: white;
+      font-size: 150px;
+      text-align: center;
+      font-family: monospace;
+    }
+    .text{
+      color: white;
+      font-size: 110px;
+      text-align: center;
+      font-family: cursive;
+      font-weight: bold;
+    }
+  .buenos-dias {
+    background-color: #87CEEB;
+  }
+  .buenas-tardes {
+    background-color: #FFA500;
+  }
+  .buenas-noches {
+    background-color: #191970;
+  }
+</style>
 </head>
 <body>
   <div id="reloj"></div>
