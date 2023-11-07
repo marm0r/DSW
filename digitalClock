@@ -57,8 +57,20 @@
       if(segundos < 10) {
         formato += '0';
       }
-      formato += segundos + ':';
+      formato += segundos;
+      reloj.textContent =formato;
+
+    if (hora>= 19 || <5 ){
+      saludo.textContent ="BUENAS NOCHES";
+      document.body.className= "buenas-noches";
+    }else if (hora>= 5 && hora <5 ){
+      saludo.textContent ="BUENOS DIAS";
+      document.body.className= "buenos-dias";
+    }else {
+      saludo.textContent ="BUENAS TARDES";
+      document.body.className= "buenas-tardes;
     }
+  }
     setInterval(actualizar, 1000);
     acturalizar();
   </script>
