@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Digital Clock</title>
+  //style
+</head>
+<body>
+  <div id="reloj"></div>
+  <div id="saludo"></div>
+
+  <script>
+    function actualiza() {
+      const reloj = document.getElementById("reloj");
+      const saludo= document.getElementById("saludo");
+      const fecha = new Date();
+      const hora = fecha.getHours();
+      const minutos = fecha.getHours();
+      const segundos = fecha.getHours();
+    }
+  </script>
+</body>
+</html>
