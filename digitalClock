@@ -19,16 +19,16 @@
       font-family: cursive;
       font-weight: bold;
     }
-  .buenos-dias {
-    background-color: #87CEEB;
-  }
-  .buenas-tardes {
-    background-color: #FFA500;
-  }
-  .buenas-noches {
-    background-color: #191970;
-  }
-</style>
+    .buenos-dias {
+      background-color: #87CEEB;
+    }
+    .buenas-tardes {
+      background-color: #FFA500;
+    }
+    .buenas-noches {
+      background-color: #191970;
+    }
+  </style>
 </head>
 <body>
   <div id="reloj"></div>
@@ -42,7 +42,25 @@
       const hora = fecha.getHours();
       const minutos = fecha.getHours();
       const segundos = fecha.getHours();
+      var formato = '';
+
+      if(hora < 10) {
+        formato += '0';
+      }
+      formato += hora + ':';
+
+      if(minutos < 10) {
+        formato += '0';
+      }
+      formato += minutos + ':';
+
+      if(segundos < 10) {
+        formato += '0';
+      }
+      formato += segundos + ':';
     }
+    setInterval(actualizar, 1000);
+    acturalizar();
   </script>
 </body>
 </html>
