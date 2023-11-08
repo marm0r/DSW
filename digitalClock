@@ -6,12 +6,14 @@
     body {
       background-color: black;
     }
+    //estilo del reloj
     .clock{
       color: white;
       font-size: 150px;
       text-align: center;
       font-family: monospace;
     }
+    //estilo del mensaje
     .text{
       color: white;
       font-size: 110px;
@@ -19,6 +21,7 @@
       font-family: cursive;
       font-weight: bold;
     }
+    //fondos dependiendo el mensaje
     .buenos-dias {
       background-color: #87CEEB;
     }
@@ -31,8 +34,8 @@
   </style>
 </head>
 <body>
-  <div id="reloj"></div>
-  <div id="saludo"></div>
+  <div id="reloj" class="clock"></div>
+  <div id="saludo" class="text"></div>
 
   <script>
     function actualiza() {
@@ -44,6 +47,7 @@
       const segundos = fecha.getHours();
       var formato = '';
 
+      //agregar un 0 si el numero es menos a 10
       if(hora < 10) {
         formato += '0';
       }
@@ -60,17 +64,20 @@
       formato += segundos;
       reloj.textContent =formato;
 
-    if (hora>= 19 || <5 ){
-      saludo.textContent ="BUENAS NOCHES";
-      document.body.className= "buenas-noches";
-    }else if (hora>= 5 && hora <5 ){
-      saludo.textContent ="BUENOS DIAS";
-      document.body.className= "buenos-dias";
-    }else {
-      saludo.textContent ="BUENAS TARDES";
-      document.body.className= "buenas-tardes;
+      //cambiar el mensaje y fondo dependiendo la hora
+      if (hora>= 19 || <5 ){
+        saludo.textContent ="BUENAS NOCHES";
+        document.body.className= "buenas-noches";
+      }
+      else if (hora>= 5 && hora <5 ){
+        saludo.textContent ="BUENOS DIAS";
+        document.body.className= "buenos-dias";
+      }
+      else {
+        saludo.textContent ="BUENAS TARDES";
+        document.body.className= "buenas-tardes;
+      }
     }
-  }
     setInterval(actualizar, 1000);
     acturalizar();
   </script>
